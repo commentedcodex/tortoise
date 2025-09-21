@@ -15,6 +15,7 @@ class Product {
   final String shippingDetails;
   final List<String> storageOptions;
   final ProductSpecifications specifications;
+  final List<String> previewImages;
 
   Product({
     required this.id,
@@ -30,5 +31,6 @@ class Product {
     required this.shippingDetails,
     required this.storageOptions,
     required this.specifications,
+    required this.previewImages,
   });
 }

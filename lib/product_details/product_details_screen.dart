@@ -24,6 +24,7 @@ class ProductDetailsScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: AppColors.background,
         appBar: AppBar(
+          scrolledUnderElevation: 0,
           toolbarHeight: 114,
           backgroundColor: AppColors.white,
           automaticallyImplyLeading: false,

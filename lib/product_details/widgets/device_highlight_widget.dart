@@ -8,21 +8,16 @@ class DeviceHighlightWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Selector<ProductDetailsViewModel, String>(
-          selector: (context, viewModel) => viewModel.product.imageUrl,
-          builder: (context, imageUrl, child) {
-            return ImageExpandedSection(
-              collapsedHeight: 342,
-              expandedHeight: 800,
-              expansionCtaText: 'View more',
-              imageUrl: imageUrl,
-            );
-          },
-        ),
-      ],
+    return Selector<ProductDetailsViewModel, String>(
+      selector: (context, viewModel) => viewModel.product.imageUrl,
+      builder: (context, imageUrl, child) {
+        return ImageExpandedSection(
+          collapsedHeight: 342,
+          expandedHeight: 800,
+          expansionCtaText: 'View more',
+          imageUrl: imageUrl,
+        );
+      },
     );
   }
 }

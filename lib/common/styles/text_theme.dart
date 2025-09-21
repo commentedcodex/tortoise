@@ -30,7 +30,6 @@ class AppTypography {
       letterSpacing: 0,
       color: AppColors.black,
     ),
-
     titleLarge: TextStyle(
       fontFamily: defaultFont,
       fontWeight: FontWeight.w600,
@@ -38,8 +37,7 @@ class AppTypography {
       height: 22 / 16,
       letterSpacing: 0,
       color: AppColors.black,
-    ), // Card/list headings
-
+    ),
     titleMedium: TextStyle(
       fontFamily: defaultFont,
       fontWeight: FontWeight.w600,
@@ -48,7 +46,6 @@ class AppTypography {
       letterSpacing: 0,
       color: AppColors.black,
     ),
-
     titleSmall: TextStyle(
       fontFamily: defaultFont,
       fontWeight: FontWeight.w600,
@@ -57,7 +54,6 @@ class AppTypography {
       letterSpacing: 0,
       color: AppColors.black,
     ),
-
     bodyLarge: TextStyle(
       fontFamily: defaultFont,
       fontWeight: FontWeight.w500,

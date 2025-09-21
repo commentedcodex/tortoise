@@ -112,5 +112,11 @@ final mockProducts = [
       weight: '199 grams',
       dimensions: '159.9 × 76.7 × 8.25 mm',
     ),
+    previewImages: [
+      ImagePaths.iphone17ProCarouselImage,
+      ImagePaths.iphone17ProCarouselImage,
+      ImagePaths.iphone17ProCarouselImage,
+      ImagePaths.iphone17ProCarouselImage,
+    ],
   ),
 ];

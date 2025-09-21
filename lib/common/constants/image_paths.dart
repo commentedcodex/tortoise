@@ -23,4 +23,7 @@ class ImagePaths {
   static const String macbookPro = '${_imagesPath}macbook_pro.webp';
   static const String iphone17ProHeroImage =
       '${_imagesPath}iphone_17_pro_hero.webp';
+
+  static const String iphone17ProCarouselImage =
+      '${_imagesPath}iphone_17_pro_carousel_image.webp';
 }

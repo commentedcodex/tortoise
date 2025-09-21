@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tortoise_assignment/product_details/widgets/color_picker_widget.dart';
 import 'package:tortoise_assignment/product_details/widgets/device_highlight_widget.dart';
+import 'package:tortoise_assignment/product_details/widgets/device_preview_carousel.dart';
 import 'package:tortoise_assignment/product_details/widgets/device_specifications_widget.dart';
 import 'package:tortoise_assignment/product_details/widgets/protected_label.dart';
 import 'package:tortoise_assignment/product_details/widgets/shipping_label.dart';
@@ -15,6 +16,7 @@ class ProductDetailsBody extends StatelessWidget {
       child: Column(
         children: [
           ShippingLabel(),
+          DevicePreviewCarousel(),
           const ProtectedLabel(),
           Padding(
             padding: EdgeInsets.fromLTRB(24, 24, 24, 300),
