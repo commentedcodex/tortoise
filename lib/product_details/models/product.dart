@@ -1,4 +1,5 @@
 import 'package:tortoise_assignment/product_details/models/product_color.dart';
+import 'package:tortoise_assignment/product_details/models/product_specifications.dart';
 
 class Product {
   final int id;
@@ -13,6 +14,7 @@ class Product {
   final List<ProductColor> colors;
   final String shippingDetails;
   final List<String> storageOptions;
+  final ProductSpecifications specifications;
 
   Product({
     required this.id,
@@ -27,5 +29,6 @@ class Product {
     required this.colors,
     required this.shippingDetails,
     required this.storageOptions,
+    required this.specifications,
   });
 }

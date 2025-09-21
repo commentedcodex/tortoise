@@ -56,7 +56,7 @@ class AppTypography {
       height: 18 / 13,
       letterSpacing: 0,
       color: AppColors.black,
-    ), // Bold captions
+    ),
 
     bodyLarge: TextStyle(
       fontFamily: defaultFont,

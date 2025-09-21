@@ -28,7 +28,7 @@ class ProductDetailsScreen extends StatelessWidget {
           backgroundColor: AppColors.white,
           automaticallyImplyLeading: false,
           flexibleSpace: Padding(
-            padding: const EdgeInsets.fromLTRB(24, 20, 24, 0),
+            padding: const EdgeInsets.fromLTRB(24, 60, 24, 0),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
