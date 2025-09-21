@@ -48,7 +48,7 @@ class DevicePriceFooter extends StatelessWidget {
               Expanded(
                 child: EffectivePriceWidget(
                   onTap: () {
-                    final viewModel = Provider.of<ProductDetailsViewModel>(
+                    final viewModel = Provider.of<ProductDetailsProvider>(
                       context,
                       listen: false,
                     );
@@ -59,7 +59,7 @@ class DevicePriceFooter extends StatelessWidget {
                       context: context,
                       builder:
                           (BuildContext context) => EffectiveWidgetBottomSheet(
-                            productDetailsViewModel: viewModel,
+                            productDetailsProvider: viewModel,
                           ),
                     );
                   },

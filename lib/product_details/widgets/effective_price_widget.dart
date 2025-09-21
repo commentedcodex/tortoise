@@ -28,7 +28,7 @@ class EffectivePriceWidget extends StatelessWidget {
             ],
           ),
         ),
-        child: Selector<ProductDetailsViewModel, Product>(
+        child: Selector<ProductDetailsProvider, Product>(
           selector: (context, viewModel) => viewModel.product,
           builder: (context, product, child) {
             return Container(

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:tortoise_assignment/common/styles/app_colors.dart';
 import 'package:tortoise_assignment/product_catalog/viewmodel/product_catalog_viewmodel.dart';
 import 'package:tortoise_assignment/product_catalog/widgets/available_devices_list.dart';
+import 'package:tortoise_assignment/product_catalog/widgets/brand_search_bar.dart';
 import 'package:tortoise_assignment/product_catalog/widgets/popular_brands_list.dart';
 
 class ProductCatalogScreen extends StatelessWidget {
@@ -13,35 +15,36 @@ class ProductCatalogScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {},
-        ),
-        title: Text(
-          'Product Catalog',
-          style: Theme.of(
-            context,
-          ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w600),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.search, color: Colors.black),
-            onPressed: () {},
+        scrolledUnderElevation: 0,
+        toolbarHeight: 114,
+        backgroundColor: AppColors.white,
+        automaticallyImplyLeading: false,
+        flexibleSpace: Padding(
+          padding: const EdgeInsets.fromLTRB(24, 50, 24, 0),
+          child: Row(
+            spacing: 24,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => Navigator.of(context).pop(),
+                child: const Icon(
+                  PhosphorIconsFill.caretCircleLeft,
+                  color: AppColors.grey300,
+                  size: 32,
+                ),
+              ),
+              Expanded(child: BrandSearchBar()),
+            ],
           ),
-        ],
+        ),
       ),
-      body: SafeArea(
+      body: ChangeNotifierProvider(
+        create: (context) => ProductCatalogProvider(),
         child: Padding(
           padding: const EdgeInsets.all(22),
-          child: ChangeNotifierProvider(
-            create: (context) => ProductCatalogProvider(),
-            child: Column(
-              spacing: 30,
-              children: [PopularBrandsList(), AvailableDevicesList()],
-            ),
+          child: Column(
+            spacing: 30,
+            children: [PopularBrandsList(), AvailableDevicesList()],
           ),
         ),
       ),

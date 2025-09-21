@@ -6,16 +6,16 @@ import 'package:tortoise_assignment/product_details/viewmodel/product_details_vi
 import 'package:tortoise_assignment/product_details/widgets/price_breakdown_widget.dart';
 
 class EffectiveWidgetBottomSheet extends StatelessWidget {
-  final ProductDetailsViewModel productDetailsViewModel;
+  final ProductDetailsProvider productDetailsProvider;
   const EffectiveWidgetBottomSheet({
     super.key,
-    required this.productDetailsViewModel,
+    required this.productDetailsProvider,
   });
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider.value(
-      value: productDetailsViewModel,
+      value: productDetailsProvider,
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.white,
@@ -23,7 +23,7 @@ class EffectiveWidgetBottomSheet extends StatelessWidget {
         ),
         width: double.infinity,
         padding: const EdgeInsets.fromLTRB(24, 24, 24, 36),
-        child: Selector<ProductDetailsViewModel, Product>(
+        child: Selector<ProductDetailsProvider, Product>(
           selector: (_, viewModel) => viewModel.product,
           builder: (context, value, child) {
             return Column(

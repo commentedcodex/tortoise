@@ -15,12 +15,6 @@ class ProductCatalogProvider extends ChangeNotifier {
   int? _selectedBrandId;
   int? get selectedBrandId => _selectedBrandId;
 
-  ProductCatalogProvider() {
-    // if (devices.isNotEmpty) {
-    //   _selectedBrandId = brands.first.id;
-    // }
-  }
-
   void selectBrand(int brandId) {
     if (_selectedBrandId != brandId) {
       _selectedBrandId = brandId;

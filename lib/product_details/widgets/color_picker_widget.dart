@@ -21,7 +21,7 @@ class ColorPickerWidget extends StatelessWidget {
         SizedBox(height: 4),
         Text("Pick a color", style: Theme.of(context).textTheme.bodyLarge),
         SizedBox(height: 16),
-        Consumer<ProductDetailsViewModel>(
+        Consumer<ProductDetailsProvider>(
           builder: (context, viewModel, child) {
             return Row(
               spacing: 8,

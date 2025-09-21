@@ -21,7 +21,7 @@ class DeviceSpecificationsWidget extends StatelessWidget {
           ).textTheme.labelLarge?.copyWith(color: AppColors.grey500),
         ),
         SizedBox(height: 16),
-        Consumer<ProductDetailsViewModel>(
+        Consumer<ProductDetailsProvider>(
           builder: (context, viewModel, child) {
             final specs = viewModel.product.specifications;
 

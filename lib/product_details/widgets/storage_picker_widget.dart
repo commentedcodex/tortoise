@@ -24,7 +24,7 @@ class StoragePickerWidget extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyLarge,
         ),
         SizedBox(height: 16),
-        Consumer<ProductDetailsViewModel>(
+        Consumer<ProductDetailsProvider>(
           builder: (context, viewModel, child) {
             return Wrap(
               runSpacing: 8,

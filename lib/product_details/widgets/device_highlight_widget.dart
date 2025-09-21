@@ -8,7 +8,7 @@ class DeviceHighlightWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Selector<ProductDetailsViewModel, String>(
+    return Selector<ProductDetailsProvider, String>(
       selector: (context, viewModel) => viewModel.product.imageUrl,
       builder: (context, imageUrl, child) {
         return ImageExpandedSection(

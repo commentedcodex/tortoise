@@ -3,7 +3,7 @@ import 'package:tortoise_assignment/mock_data.dart';
 import 'package:tortoise_assignment/product_details/models/product.dart';
 import 'package:tortoise_assignment/product_details/models/product_color.dart';
 
-class ProductDetailsViewModel extends ChangeNotifier {
+class ProductDetailsProvider extends ChangeNotifier {
   final int productId;
   late Product _product;
   bool _isLoading = true;
@@ -31,7 +31,7 @@ class ProductDetailsViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  ProductDetailsViewModel(this.productId) {
+  ProductDetailsProvider(this.productId) {
     _fetchProductDetails();
   }
 

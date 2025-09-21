@@ -10,7 +10,7 @@ class DevicePriceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Selector<ProductDetailsViewModel, Product>(
+    return Selector<ProductDetailsProvider, Product>(
       selector: (context, viewModel) => viewModel.product,
       builder: (context, product, child) {
         return Container(

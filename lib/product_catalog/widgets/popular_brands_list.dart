@@ -9,7 +9,8 @@ class PopularBrandsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<ProductCatalogProvider>(context);
-    final brands = provider.brands;
+    final popularBrands =
+        provider.brands.where((brand) => brand.isPopular).toList();
     final selectedBrandId = provider.selectedBrandId;
 
     return Column(
@@ -24,14 +25,14 @@ class PopularBrandsList extends StatelessWidget {
           height: 76,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: brands.length,
+            itemCount: popularBrands.length,
             itemBuilder: (context, index) {
-              final brand = brands[index];
+              final brand = popularBrands[index];
               final selected = brand.id == selectedBrandId;
 
               return Padding(
                 padding: EdgeInsets.only(
-                  right: index == brands.length - 1 ? 0 : 12,
+                  right: index == popularBrands.length - 1 ? 0 : 12,
                 ),
                 child: BrandSelectionTab(
                   selected: selected,

@@ -9,7 +9,7 @@ class ShippingLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Selector<ProductDetailsViewModel, String>(
+    return Selector<ProductDetailsProvider, String>(
       selector: (context, viewModel) => viewModel.product.shippingDetails,
       builder: (context, shippingDetails, child) {
         return Container(

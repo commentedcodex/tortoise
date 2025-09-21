@@ -6,10 +6,10 @@ import 'package:tortoise_assignment/product_details/models/product_color.dart';
 import 'package:tortoise_assignment/product_details/models/product_specifications.dart';
 
 final List<Brand> mockBrands = [
-  Brand(id: 1, image: ImagePaths.appleLogo, name: 'Apple'),
-  Brand(id: 2, image: ImagePaths.googleLogo, name: 'Google'),
-  Brand(id: 3, image: ImagePaths.samsungLogo, name: 'Samsung'),
-  Brand(id: 4, image: ImagePaths.oneplusLogo, name: 'OnePlus'),
+  Brand(id: 1, image: ImagePaths.appleLogo, name: 'Apple', isPopular: true),
+  Brand(id: 2, image: ImagePaths.googleLogo, name: 'Google', isPopular: true),
+  Brand(id: 3, image: ImagePaths.samsungLogo, name: 'Samsung', isPopular: true),
+  Brand(id: 4, image: ImagePaths.oneplusLogo, name: 'OnePlus', isPopular: true),
 ];
 
 final List<Device> mockDevices = [

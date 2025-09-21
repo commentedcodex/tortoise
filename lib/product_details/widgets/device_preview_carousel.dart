@@ -28,7 +28,7 @@ class _DevicePreviewCarouselState extends State<DevicePreviewCarousel> {
 
   @override
   Widget build(BuildContext context) {
-    return Selector<ProductDetailsViewModel, List<String>>(
+    return Selector<ProductDetailsProvider, List<String>>(
       selector: (context, viewModel) => viewModel.product.previewImages,
       builder: (context, previewImages, child) {
         if (previewImages.isEmpty) {

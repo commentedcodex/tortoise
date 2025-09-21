@@ -20,7 +20,7 @@ class ProductDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => ProductDetailsViewModel(deviceId),
+      create: (context) => ProductDetailsProvider(deviceId),
       child: Scaffold(
         backgroundColor: AppColors.background,
         appBar: AppBar(
@@ -34,7 +34,7 @@ class ProductDetailsScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  InkWell(
+                  GestureDetector(
                     onTap: () => Navigator.of(context).pop(),
                     child: const Icon(
                       PhosphorIconsFill.caretCircleLeft,
@@ -52,7 +52,7 @@ class ProductDetailsScreen extends StatelessWidget {
             ),
           ),
         ),
-        body: Selector<ProductDetailsViewModel, bool>(
+        body: Selector<ProductDetailsProvider, bool>(
           selector: (context, viewModel) => viewModel.isLoading,
           builder: (context, isLoading, child) {
             if (isLoading) {
